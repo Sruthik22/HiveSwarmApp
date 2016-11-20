@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GeneralObservationsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="Hive ID"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/HiveIDEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffbababa"
+                    android:textSize = "18dp"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Pollen Amount"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/PollenAmountRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Little" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Some" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Lot" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Honey Amount"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/HoneyAmountRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Little" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Some" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Lot" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pest Count"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/PestCountRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Little" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Some" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Lot" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bee Count"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/BeeCountRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Little" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Some" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A Lot" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/Emergency"
+                    android:layout_width="124dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swarm"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/Swarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="No" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of Frames with Foundation"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/FramesWithFoundation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="153dp"
+                    android:layout_height="74dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of Frames with Honey / Nectar"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/FramesWithHoneyOrNectar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of Frames with Pollen"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/FramesWithPollen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of Frames with Open Comb"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/FramesWithOpenComb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of Supers in Place"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/FramesWithSupersInPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of Supers added"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/SupersAdded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temper of Bees"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/TemperRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Excellent" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Moderate" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Bad" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colony Condition"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/ColonyConditionRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Excellent" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Moderate" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Bad" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Actions / Notes Taken"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/ActionsNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:textSize = "18dp"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#ff729bff"
+                android:text="Save" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
