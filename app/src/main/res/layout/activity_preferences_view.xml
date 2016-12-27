@@ -5,106 +5,282 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin"
-    tools:context="beekeepersjournal.beekeepersjournal.PreferencesView">
+    tools:context=".PreferencesView">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preferences"
+        android:text="@string/preferences"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="18dp"/>
+        android:textSize="24sp"
+        android:visibility="gone"
+        android:id="@+id/PreferencesTitle" />
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/HiveNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How many hives do you have?" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/NumberOfHivesTextView"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How many frames per hive?" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/FramesPerHiveTextView"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How many hive bodies?" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/HiveBodiesTextView"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How many supers?" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/SupersTextView"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="What is your location?" />
+            android:text="@string/how_many_hives_do_you_have"
+            android:textSize="18sp"
+            android:layout_alignParentLeft = "true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/LocationTextView"/>
-    </LinearLayout>
+            android:id="@+id/NumberOfHivesTextView"
+            android:textSize="18sp"
+            android:layout_alignParentRight = "true"/>
+    </RelativeLayout>
 
-    <LinearLayout
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/breakLines"
+        android:layout_margin="10dp"
+        android:id="@+id/break1"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/FramesPerHiveText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How long have you been beekeeping?" />
+            android:text="@string/how_many_frames_per_hive"
+            android:textSize="18sp"
+            android:layout_alignParentLeft = "true"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/YearsOfBeekeepingTextView"/>
-    </LinearLayout>
+            android:id="@+id/FramesPerHiveTextView"
+            android:textSize="18sp"
+            android:layout_alignParentRight = "true"/>
+    </RelativeLayout>
 
-    <Button
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/breakLines"
+        android:layout_margin="10dp"
+        android:id="@+id/break2"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/HiveBodiesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_many_hive_bodies"
+            android:textSize="18sp"
+            android:layout_alignParentLeft = "true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/HiveBodiesTextView"
+            android:textSize="18sp"
+            android:layout_alignParentRight = "true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/breakLines"
+        android:layout_margin="10dp"
+        android:id="@+id/break3"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/SupersText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_many_supers"
+            android:textSize="18sp"
+            android:layout_alignParentLeft = "true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/SupersTextView"
+            android:textSize="18sp"
+            android:layout_alignParentRight = "true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/breakLines"
+        android:layout_margin="10dp"
+        android:id="@+id/break4"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/LocationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Location"
+            android:textSize="18sp"
+            android:layout_alignParentLeft = "true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/LocationTextView"
+            android:textSize="18sp"
+            android:layout_alignParentRight = "true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/breakLines"
+        android:layout_margin="10dp"
+        android:id="@+id/break5"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/YearsOfBeekeepingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beekeeping_length"
+            android:textSize="18sp"
+            android:layout_alignParentLeft = "true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/beekeeping_length"
+            android:textSize="18sp"
+            android:layout_alignParentRight = "true"/>
+    </RelativeLayout>
+
+    <Button style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/btnChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/change"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_preferences"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp"
+        android:id="@+id/PreferencesChangeTextView" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/HiveNumberTextInputLayout">
+
+        <EditText
+            android:id="@+id/NumberOfHives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/how_many_hives_do_you_have_settings" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FramesPerHiveTextInputLayout">
+
+        <EditText
+            android:id="@+id/FramesPerHive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/how_many_frames_per_hive_settings" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/HiveBodiesTextInputLayout">
+
+        <EditText
+            android:id="@+id/HiveBodies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/how_many_hive_bodies_settings" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SupersTextInputLayout">
+
+        <EditText
+            android:id="@+id/Supers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/how_many_supers_settings" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocationTextInputLayout">
+
+        <EditText
+            android:id="@+id/Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/what_is_your_location" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/YearsOfBeekeepingTextInputLayout">
+
+        <EditText
+            android:id="@+id/YearsOfBeekeeping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/how_long_have_you_been_beekeeping" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#ff729bff"
-        android:text="Save" />
+        android:text="@string/save"
+        android:onClick="preferenceChange" />
 </LinearLayout>

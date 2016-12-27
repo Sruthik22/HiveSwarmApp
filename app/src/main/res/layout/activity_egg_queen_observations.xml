@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EggQueenObservations">
+    tools:context=".EggQueenObservations"
+    android:padding="16dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,441 +20,524 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Have you seen the queen?"
+                    android:text="@string/hs_have_you_seen_the_queen"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/QueenSeenRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no"/>
                 </RadioGroup>
 
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Is your queen marked?"
+                    android:text="@string/hs_is_your_queen_marked"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/QueenMarkedRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Have you seen queen eggs?"
+                    android:text="@string/hs_have_you_seen_queen_cells"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/QueenEggsSeenRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Have you seen Egg Larva or Pupa?"
+                    android:text="@string/hs_have_you_seen_egg_larva_or_pupa"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/EggLarvaPupaSeenRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Have you removed queen cells?"
+                    android:text="@string/hs_have_you_removed_queen_cells"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/RemovedQueenCellsRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
+
             </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/remainQueenCells"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/hs_how_many_remaining_queen_cells" />
+            </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="How many remaining queen cells?"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:inputType="number"
-                        android:ems="10"
-                        android:textSize="18sp"
-                        android:id="@+id/remainQueenCells"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Supersedure?"
+                    android:text="@string/hs_supersedure"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/supersedureRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Do you have spotty drone brood?"
+                    android:text="@string/hs_do_you_have_spotty_drone_brood"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/SpottyDroneBroodRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
+
             </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/FramesWithBrood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/hs_how_many_frames_with_brood" />
+                </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="How many frames with brood?"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
-
-                <EditText
-                    android:id="@+id/FramesWithBrood"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Do you have brood in all stages?"
+                    android:text="@string/hs_do_you_have_brood_in_all_stages"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/BroodInAllStagesRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="@string/yes"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="How is your brood pattern?"
+                    android:text="@string/hs_how_is_your_brood_pattern"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/BroodPatternRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Excellent" />
+                        android:text="@string/excellent"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Ok" />
+                        android:text="@string/moderate"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Bad" />
+                        android:text="@string/bad" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="How many frames used in Brood Chamber?"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/FramesUsedInBroodChamber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
+                    android:hint="@string/hs_how_many_frames_used_in_brood_chamber" />
+            </android.support.design.widget.TextInputLayout>
 
-            </LinearLayout>
-
-            <Button
+            <Button style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="#ff729bff"
-                android:text="Save" />
+                android:text="@string/save" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

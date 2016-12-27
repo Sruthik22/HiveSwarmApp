@@ -5,265 +5,274 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="beekeepersjournal.beekeepersjournal.PestsDiseases">
+    android:padding="16dp"
+    tools:context=".PestsDiseases">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
+        android:orientation="vertical"
         android:paddingTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Varroa Mites Seen?"
+            android:text="@string/hs_varroa_mites_seen"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
 
         <RadioGroup
             android:id="@+id/VarroaMitesRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Yes" />
+                android:text="@string/yes"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/breakLines" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Hive Beetles Seen?"
+            android:text="@string/hs_hive_beetles_seen"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
 
         <RadioGroup
             android:id="@+id/HiveBeetlesRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Yes" />
+                android:text="@string/yes"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/breakLines" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
     </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/HiveBeetlesAmountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/hs_how_many_hive_beetles" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/HiveBeetlesAffectEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/hs_what_was_the_affect_on_your_bees" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/VarroaMitesAmountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/hs_how_many_varroa_mites" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/VarroaMitesAffectEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/hs_what_was_the_affect_on_your_bees_varroa_mites" />
+            </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="How Many Hive Beetles?"
+            android:text="@string/hs_are_there_any_signs_of_disease"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/HiveBeetlesAmountEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="10"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="What was the affect on your bees?"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/HiveBeetlesAffectEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="10"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="How Many Varroa Mites?"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/VarroaMitesAmountEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="10"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="What was the affect on your bees?"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/VarroaMitesAffectEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="10"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Are there any signs of disease?"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
 
         <RadioGroup
             android:id="@+id/DieseaseRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Yes" />
+                android:text="@string/yes"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/breakLines" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
+        android:orientation="vertical"
         android:paddingTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Is there Nosema Streaking?"
+            android:text="@string/hs_is_there_nosema_streaking"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
 
         <RadioGroup
             android:id="@+id/NosemaStreakingRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Yes" />
+                android:text="@string/yes"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/breakLines" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
+
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="#ff729bff"
-        android:text="Save" />
+            <Button style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/save" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
 

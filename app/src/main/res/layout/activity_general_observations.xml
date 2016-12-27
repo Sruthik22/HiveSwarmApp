@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GeneralObservationsActivity">
+    tools:context=".GeneralObservationsActivity"
+    android:padding="16dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,559 +17,588 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:text="Hive ID"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/HiveIDEditText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="#ffbababa"
-                    android:textSize = "18dp"
-                    android:ems="10" />
-            </LinearLayout>
+                    android:inputType="text"
+                    android:hint="@string/hs_hive_Id" />
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/breakLines" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Pollen Amount"
+                    android:text="@string/hs_pollen_amount"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/PollenAmountRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Little" />
+                        android:text="@string/a_little"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Some" />
+                        android:text="@string/some"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Lot" />
+                        android:text="@string/a_lot" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Honey Amount"
+                    android:text="@string/hs_honey_amount"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/HoneyAmountRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Little" />
+                        android:text="@string/a_little"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Some" />
+                        android:text="@string/some"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Lot" />
+                        android:text="@string/a_lot"
+                        android:paddingRight="10dp"/>
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pest Count"
+                    android:text="@string/hs_pest_count"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/PestCountRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Little" />
+                        android:text="@string/a_little"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Some" />
+                        android:text="@string/some"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Lot" />
+                        android:text="@string/a_lot"
+                        android:paddingRight="10dp"/>
                 </RadioGroup>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bee Count"
+                    android:text="@string/hs_bee_count"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/BeeCountRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Little" />
+                        android:text="A Little"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Some" />
+                        android:text="Some"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="A Lot" />
+                        android:text="A Lot"
+                        android:paddingRight="10dp"/>
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Emergency"
+                    android:text="@string/hs_emergency"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/Emergency"
-                    android:layout_width="124dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:paddingRight="10dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Yes" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
 
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Swarm"
+                    android:text="@string/hs_swarm"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/Swarm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Yes" />
+                        android:text="Yes"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="No" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Number of Frames with Foundation"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/FramesWithFoundation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:hint="@string/hs_number_of_frames_with_foundation" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="153dp"
-                    android:layout_height="74dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Number of Frames with Honey / Nectar"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/FramesWithHoneyOrNectar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:hint="@string/hs_number_of_frames_with_honey_nectar" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Number of Frames with Pollen"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/FramesWithPollen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:hint="@string/hs_number_of_frames_with_pollen" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Number of Frames with Open Comb"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/FramesWithOpenComb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:hint="@string/hs_number_of_frames_with_open_comb" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Number of Supers in Place"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/FramesWithSupersInPlace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:hint="@string/hs_number_of_supers_in_place" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Number of Supers added"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/SupersAdded"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:hint="@string/hs_number_of_supers_added" />
+            </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Temper of Bees"
+                    android:text="@string/hs_temper_of_bees"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="18dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/TemperRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Excellent" />
+                        android:text="@string/angry"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Moderate" />
+                        android:text="@string/normal"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Bad" />
+                        android:text="@string/calm" />
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:orientation="vertical"
                 android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Colony Condition"
+                    android:text="@string/hs_colony_strength"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
 
                 <RadioGroup
                     android:id="@+id/ColonyConditionRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Excellent" />
+                        android:text="@string/excellent"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Moderate" />
+                        android:text="@string/moderate"
+                        android:paddingRight="10dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/breakLines" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Bad" />
+                        android:text="@string/bad"
+                        android:paddingRight="10dp"/>
                 </RadioGroup>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/breakLines"
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="159dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Actions / Notes Taken"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="18dp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/ActionsNotes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:ems="10"
-                    android:textSize = "18dp"
-                    />
-            </LinearLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/hs_actions_notes_taken" />
+            </android.support.design.widget.TextInputLayout>
 
 
-            <Button
+            <Button style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="#ff729bff"
-                android:text="Save" />
+                android:text="@string/save" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

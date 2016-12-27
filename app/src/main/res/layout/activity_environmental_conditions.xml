@@ -5,94 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="beekeepersjournal.beekeepersjournal.EnvironmentalConditions">
+    tools:context="beekeepersjournal.hiveswarm.EnvironmentalConditions">
 
-    <LinearLayout
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:text="Temperature"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/TemperatureEditText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="9"
-            android:inputType="number"/>
-    </LinearLayout>
+            android:inputType="number"
+            android:hint="@string/hs_temperature" />
+    </android.support.design.widget.TextInputLayout>
 
-    <LinearLayout
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:text="Humidity"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp"/>
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/HumidityEditText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="10"
-            android:inputType="number"/>
-    </LinearLayout>
+            android:inputType="number"
+            android:hint="@string/hs_humidity" />
+    </android.support.design.widget.TextInputLayout>
 
-    <LinearLayout
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:text="Precipitation"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp"/>
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/PrecipitationEditText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="9"
-            android:inputType="number"/>
-    </LinearLayout>
+            android:inputType="number"
+            android:hint="@string/hs_precipitation" />
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,28 +57,27 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Cloud Coverage"
+            android:text="@string/hs_weather_condition"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="18dp" />
 
-        <EditText
-            android:id="@+id/CloudCoverageEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/CloudCoverageSpinner"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#ffbababa"
-            android:ems="10"
-            android:inputType="number"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/weather_arrays"
+            android:prompt="@string/hs_weather_condition" />
     </LinearLayout>
 
 
-    <Button
+    <Button style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#ff729bff"
-        android:text="Save" />
+        android:text="@string/save" />
+
 </LinearLayout>
 

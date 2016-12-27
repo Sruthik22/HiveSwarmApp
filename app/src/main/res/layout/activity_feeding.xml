@@ -1,146 +1,124 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical"
-        tools:context="beekeepersjournal.beekeepersjournal.Feeding">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".Feeding">
 
-
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:paddingBottom="10dp"
-                   android:paddingLeft="3dp"
-                   android:paddingRight="3dp"
-                   android:paddingTop="10dp">
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="match_parent"
-                       android:text="Do You Feed your bees?"
-                       android:textAppearance="?android:attr/textAppearanceLarge"
-                       android:textSize="18dp"/>
-                   <RadioGroup
-                       android:id="@+id/FeedBeesRadioGroup"
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_marginLeft="10dp"
-                       android:layout_marginRight="10dp"
-                       android:orientation="horizontal">
-                       <RadioButton
-                           android:layout_width="wrap_content"
-                           android:layout_height="match_parent"
-                           android:text="Yes"/>
-                       <RadioButton
-                           android:layout_width="wrap_content"
-                           android:layout_height="match_parent"
-                           android:text="No"/>
-                   </RadioGroup>
-               </LinearLayout>
-
-        <LinearLayout
+    <ScrollView
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/hs_do_you_feed_your_bees"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/FeedBeesRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:paddingBottom="10dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:paddingTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reason to Feed Bees"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="18dp"/>
+            android:gravity="center">
 
-            <EditText android:id="@+id/Reason"
+            <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:background="#ffbababa"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" /> </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:paddingTop="10dp">
-            <TextView
+                android:layout_height="match_parent"
+                android:text="@string/yes"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/breakLines" />
+
+            <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Frequency"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="18dp"/>
-            <EditText android:id="@+id/Frequency"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:background="#ffbababa"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:inputType="number"/> </LinearLayout>
+                android:layout_height="match_parent"
+                android:text="@string/no" />
+        </RadioGroup>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Amount"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="18dp"/>
-
-            <EditText
-                android:id="@+id/Amount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:background="#ffbababa"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:inputType="number"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Type of Food"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="18dp"/>
-
-            <EditText
-                android:id="@+id/TypeOfFood"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:background="#ffbababa"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:background="#ff729bff"
-            android:layout_margin="10dp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/breakLines"
+            android:layout_margin="10dp"/>
     </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/Reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/hs_reason_to_feed_bees" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/Frequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/hs_frequency" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/hs_amount" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/TypeOfFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/hs_type_of_food" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button style="@style/Widget.AppCompat.Button.Colored"
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/save" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,6 +1,134 @@
 <resources>
-    <string name="app_name">BeeKeepersJournal</string>
+    <string name="app_name">HiveSwarm</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="weather_arrays">
+        <item>Sunny</item>
+        <item>Cloudy</item>
+        <item>Rainy</item>
+        <item>Snowing</item>
+        <item>Hailing</item>
+        <item>Sleeting</item>
+    </string-array>
+
+    <string name="title_text">HiveSwarm</string>
+
+    <!-- Sign-in status messages -->
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="signed_in">Signed in</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="signed_out">Signed out</string>
+    <string name="signed_in_err">"Error: please check logs."</string>
+    <string name="error_null_person">
+        Error: Plus.PeopleApi.getCurrentPerson returned null. Ensure that the Google+ API is
+        enabled for your project, you have a properly configured google-services.json file
+        and that your device has an internet connection.
+    </string>
+    <string name="loading">Loading…</string>
+    <string name="auth_code_fmt">Auth Code: %s</string>
+    <string name="id_token_fmt">ID Token: %s</string>
+
+    <!-- Google Play Services error for Toast -->
+    <string name="play_services_error_fmt">Google Play Services Error: %i</string>
+
+    <!-- Button labels -->
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="refresh_token">Get Fresh Token</string>
+
+    <!-- Content Description for images -->
+    <string name="desc_google_icon">Google Logo</string>
+
+    <!-- Rationale for asking for Contacts -->
+    <string name="contacts_permission_rationale">Contacts access is needed in order to retrieve your email address.</string>
+
+    <!-- Activity Names and Descriptions -->
+    <string name="name_sign_in_activity">SignInActivity</string>
+    <string name="desc_sign_in_activity">Signing in, signing out, and revoking access.</string>
+    <string name="desc_sign_in_activity_scopes">Signing in, signing out, and revoking access with Google Drive permissions.</string>
+    <string name="name_id_token_activity">IdTokenActivity</string>
+    <string name="desc_id_token_activity">Retrieving an ID Token for the user.</string>
+    <string name="desc_auth_code_activity">Demonstrate retrieving an auth code for authorizing your server.</string>
+    <string name="name_auth_code_activity">ServerAuthCodeActivity</string>
+
+    <!-- TODO(user): replace with your real server client ID -->
+    <!-- Server Client ID.  This should be a valid Web OAuth 2.0 Client ID obtained
+         from https://console.developers.google.com/ -->
+    <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
+    <string name="beekeeping_length">How long have you been beekeeping?</string>
+    <string name="Location">What is your location?</string>
+    <string name="how_many_supers">How many supers?</string>
+    <string name="how_many_hive_bodies">How many hive bodies?</string>
+    <string name="how_many_frames_per_hive">How many frames per hive?</string>
+    <string name="how_many_hives_do_you_have">How many hives do you have?</string>
+    <string name="add_some_data_to_analyze">Add Some Data to Analyze</string>
+
+
+    <string name="hs_creation_date">Creation Date: </string>
+    <string name="hs_hive_Id">Hive_ID: </string>
+    <string name="hs_temper_of_bees">Temper of Bees: </string>
+    <string name="hs_pollen_amount">Pollen Amount: </string>
+    <string name="hs_honey_amount">Honey Amount: </string>
+    <string name="hs_pest_count">Pest Count: </string>
+    <string name="hs_bee_count">Bee Count: </string>
+    <string name="hs_emergency">Emergency: </string>
+    <string name="hs_swarm">Swarm: </string>
+    <string name="hs_number_of_frames_with_foundation">Number of Frames with Foundation: </string>
+    <string name="hs_number_of_frames_with_honey_nectar">Number of Frames with Honey / Nectar: </string>
+    <string name="hs_number_of_frames_with_pollen">Number of Frames with Pollen: </string>
+    <string name="hs_number_of_frames_with_open_comb">Number of Frames with Open Comb: </string>
+    <string name="hs_number_of_supers_in_place">Number of Supers in Place: </string>
+    <string name="hs_number_of_supers_added">Number of Supers added: </string>
+    <string name="hs_colony_strength">Colony Strength: </string>
+    <string name="hs_actions_notes_taken">Actions / Notes Taken: </string>
+    <string name="hs_temperature">Temperature: </string>
+    <string name="hs_humidity">Humidity: </string>
+    <string name="hs_precipitation">Precipitation: </string>
+    <string name="hs_weather_condition">Choose a Weather Condition</string>
+    <string name="hs_varroa_mites_seen">Varroa Mites Seen: </string>
+    <string name="hs_hive_beetles_seen">Hive Beetles Seen: </string>
+    <string name="hs_how_many_hive_beetles">How Many Hive Beetles: </string>
+    <string name="hs_what_was_the_affect_on_your_bees">What was the affect on your bees: </string>
+    <string name="hs_how_many_varroa_mites">How Many Varroa Mites: </string>
+    <string name="hs_what_was_the_affect_on_your_bees_varroa_mites">What was the affect on your bees: </string>
+    <string name="hs_are_there_any_signs_of_disease">Are there any signs of disease: </string>
+    <string name="hs_is_there_nosema_streaking">Is there Nosema Streaking: </string>
+    <string name="hs_have_you_seen_the_queen">Have you seen the queen: </string>
+    <string name="hs_is_your_queen_marked">Is your queen marked: </string>
+    <string name="hs_have_you_seen_queen_cells">Have you seen queen cells: </string>
+    <string name="hs_have_you_seen_egg_larva_or_pupa">Have you seen Egg Larva or Pupa: </string>
+    <string name="hs_have_you_removed_queen_cells">Have you removed queen cells: </string>
+    <string name="hs_how_many_remaining_queen_cells">How many remaining queen cells: </string>
+    <string name="hs_supersedure">Supersedure: </string>
+    <string name="hs_do_you_have_spotty_drone_brood">Do you have spotty drone brood: </string>
+    <string name="hs_how_many_frames_with_brood">How many frames with brood: </string>
+    <string name="hs_do_you_have_brood_in_all_stages">Do you have brood in all stages: </string>
+    <string name="hs_how_is_your_brood_pattern">How is your brood pattern: </string>
+    <string name="hs_how_many_frames_used_in_brood_chamber">How many frames used in Brood Chamber: </string>
+    <string name="hs_do_you_feed_your_bees">Do You Feed your bees: </string>
+    <string name="hs_reason_to_feed_bees">Reason to Feed Bees: </string>
+    <string name="hs_frequency">Frequency: </string>
+    <string name="hs_amount">Amount: </string>
+    <string name="hs_type_of_food">Type of Food: </string>
+    <string name="share_data">Share Data</string>
+    <string name="a_little">A Little</string>
+    <string name="some">Some</string>
+    <string name="a_lot">A Lot</string>
+    <string name="save">Save</string>
+    <string name="angry">Angry</string>
+    <string name="normal">Normal</string>
+    <string name="calm">Calm</string>
+    <string name="excellent">Excellent</string>
+    <string name="moderate">Moderate</string>
+    <string name="bad">Bad</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="how_long_have_you_been_beekeeping">How long have you been beekeeping: </string>
+    <string name="what_is_your_location">What is your location: </string>
+    <string name="how_many_supers_settings">How many supers: </string>
+    <string name="how_many_hive_bodies_settings">How many hive bodies: </string>
+    <string name="how_many_frames_per_hive_settings">How many frames per hive: </string>
+    <string name="how_many_hives_do_you_have_settings">How many hives do you have: </string>
+    <string name="change">Change</string>
+    <string name="change_preferences">Change Preferences</string>
+    <string name="preferences">Preferences</string>
 </resources>
