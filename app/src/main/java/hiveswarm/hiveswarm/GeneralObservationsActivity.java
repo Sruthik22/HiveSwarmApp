@@ -46,7 +46,7 @@ public class GeneralObservationsActivity extends Activity {
                     public void run() {
                         EditText HiveID = (EditText) findViewById(R.id.HiveIDEditText);
                         String hiveID = HiveID.getText().toString();
-                        hiveData.put(username, SignInActivity.Display_Name);
+                        hiveData.put(username, SignInActivity.sign_email);
                         hiveData.put(hiveId, hiveID);
 
                         //Pollen

@@ -1,19 +1,19 @@
 {
   "project_info": {
-    "project_number": "1017391158260",
-    "project_id": "firebase-hiveswarm-2"
+    "project_number": "200445756982",
+    "project_id": "hiveswarm-154903"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1017391158260:android:ceb7161ac63d71d2",
+        "mobilesdk_app_id": "1:200445756982:android:ceb7161ac63d71d2",
         "android_client_info": {
           "package_name": "hiveswarm.hiveswarm"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1017391158260-427h4na42a9cju4076o45srlv1k2juab.apps.googleusercontent.com",
+          "client_id": "200445756982-9ret596esjoorph8aksa8l0vkpoao4nn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "hiveswarm.hiveswarm",
@@ -21,13 +21,13 @@
           }
         },
         {
-          "client_id": "1017391158260-n1vjtclhok8vtv0jhp9rksb13ka1p284.apps.googleusercontent.com",
+          "client_id": "200445756982-0i54666tr7skp3cbb17892g2anv1vmt3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAVvRmhNjRtngpU1D779jd8mJ6psPdJQy0"
+          "current_key": "AIzaSyBneeFYo6JgNd-FTp9iEFHl7XQ10Hwn5ZM"
         }
       ],
       "services": {

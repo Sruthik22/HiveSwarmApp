@@ -11,28 +11,52 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="hiveswarm.hiveswarm.App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/bee"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="hiveswarm.hiveswarm.GeneralObservationsActivity" />
-        <activity android:name="hiveswarm.hiveswarm.EnvironmentalConditions" />
-        <activity android:name="hiveswarm.hiveswarm.PestsDiseases" />
-        <activity android:name="hiveswarm.hiveswarm.EggQueenObservations" />
-        <activity android:name="hiveswarm.hiveswarm.Feeding" />
-        <activity android:name="hiveswarm.hiveswarm.SetAlarm" />
-        <activity android:name="hiveswarm.hiveswarm.MainActivity" />
-        <activity android:name="hiveswarm.hiveswarm.SignInActivity">
+        <activity android:name=".GeneralObservationsActivity" />
+        <activity android:name=".EnvironmentalConditions" />
+        <activity android:name=".PestsDiseases" />
+        <activity android:name=".EggQueenObservations" />
+        <activity android:name=".Feeding" />
+        <activity android:name=".SetAlarm" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="hiveswarm.hiveswarm.SingleItemView"></activity>
+        <activity
+            android:name=".HiveInformation"
+            android:theme="@style/DrawerTheme" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".GShownActivity" />
+        <activity
+            android:name=".EShownActivity"
+            android:theme="@style/DrawerTheme" />
+        <activity
+            android:name=".FShownActivity"
+            android:theme="@style/DrawerTheme" />
+        <activity
+            android:name=".SShownActivity"
+            android:theme="@style/DrawerTheme" />
+        <activity
+            android:name=".PShownActivity"
+            android:theme="@style/DrawerTheme" />
+        <activity
+            android:name=".DShownActivity"
+            android:theme="@style/DrawerTheme" />
+        <activity
+            android:name=".EQShownActivity"
+            android:theme="@style/DrawerTheme" />
+        <activity android:name=".FeedingShownActivity" />
+        <activity android:name=".HivesWithHiveID"></activity>
     </application>
 
 </manifest>

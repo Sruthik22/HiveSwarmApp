@@ -86,21 +86,13 @@ public class SettingsCollection {
     }
 
     public List<String> getValuesSettings() throws ParseException {
-        SettingsCollection.doStuff(SignInActivity.Display_Name, new FindCallback<settings>() {
+        SettingsCollection.doStuff(SignInActivity.sign_email, new FindCallback<settings>() {
             public void done(List<settings> settingsList, ParseException exception) {
                 if (exception == null) {
                     setupList(PreferencesView.mView, settingsList);
                 }
             }
         });
-
-            /*
-            query.whereNotEqualTo("createdDate", creationDate);
-
-            for (settings settingsToDelete : query.find()) {
-                settingsToDelete.deleteInBackground();
-                PreferencesView.SettingsData.pinInBackground();
-            }*/
 
         return settingsArray;
     }

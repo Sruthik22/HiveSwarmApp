@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Home"));
         tabLayout.addTab(tabLayout.newTab().setText("Analyze"));
         tabLayout.addTab(tabLayout.newTab().setText("Settings"));
-        tabLayout.addTab(tabLayout.newTab().setText("View Data"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -43,6 +42,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

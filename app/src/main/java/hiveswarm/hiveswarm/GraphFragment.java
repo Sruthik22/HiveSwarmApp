@@ -12,36 +12,55 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import lecho.lib.hellocharts.listener.LineChartOnValueSelectListener;
 import lecho.lib.hellocharts.listener.PieChartOnValueSelectListener;
+import lecho.lib.hellocharts.model.Axis;
+import lecho.lib.hellocharts.model.Line;
+import lecho.lib.hellocharts.model.LineChartData;
 import lecho.lib.hellocharts.model.PieChartData;
+import lecho.lib.hellocharts.model.PointValue;
 import lecho.lib.hellocharts.model.SliceValue;
+import lecho.lib.hellocharts.model.ValueShape;
+import lecho.lib.hellocharts.util.ChartUtils;
+import lecho.lib.hellocharts.view.LineChartView;
 import lecho.lib.hellocharts.view.PieChartView;
 
 public class GraphFragment extends Fragment {
 
-
-    private List<SliceValue> values;
+    private List<PointValue> values;
     private List<String> dates;
 
-    private boolean hasCenterText1 = false;
-    private boolean hasCenterText2 = false;
+    public LineChartView chart;
+    public LineChartData data;
 
-    public PieChartView chart;
-    public PieChartData data;
+    private int numberOfLines = 1;
+    private int maxNumberOfLines = 4;
+    private int numberOfPoints = 12;
+
+    float[][] randomNumbersTab = new float[maxNumberOfLines][numberOfPoints];
+
+    private boolean hasAxes = true;
+    private boolean hasAxesNames = true;
+    private boolean hasLines = true;
+    private boolean hasPoints = true;
+    private ValueShape shape = ValueShape.CIRCLE;
+    private boolean isFilled = false;
+    private boolean hasLabels = false;
+    private boolean isCubic = false;
+    private boolean hasLabelForSelected = false;
 
     private HiveDataCollection hiveDataCollection;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        View rootView = inflater.inflate(R.layout.fragment_pie_chart, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_line_chart, container, false);
 
-        chart = (PieChartView) rootView.findViewById(R.id.chart);
+        chart = (LineChartView) rootView.findViewById(R.id.chart);
         chart.setOnValueTouchListener(new GraphFragment.ValueTouchListener());
-
-        TextView displayAddData = (TextView) rootView.findViewById(R.id.displayAddData);
 
         generateData();
 
@@ -56,20 +75,50 @@ public class GraphFragment extends Fragment {
         BroadcastReceiver receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                values = hiveDataCollection.framesOfHoney;
-                data = new PieChartData(values);
-                data.setHasLabels(true);
-                data.setHasLabelsOnlyForSelected(true);
-                data.setHasLabelsOutside(true);
-                data.setHasCenterCircle(true);
 
-                data.setCenterText1("Frames With Honey");
+                //values = hiveDataCollection.framesOfHoney;
+                //data = new LineChartData(values);
 
-                data.setCenterText2("Each Record Saved");
+                List<Line> lines = new ArrayList<Line>();
+                for (int i = 0; i < numberOfLines; ++i) {
 
-                data.setCenterText1FontSize(20);
+                    List<PointValue> values = new ArrayList<PointValue>();
+                    for (int j = 0; j < numberOfPoints; ++j) {
+                        values.add(new PointValue(j, randomNumbersTab[i][j]));
+                    }
 
-                chart.setPieChartData(data);
+                    Line line = new Line(values);
+                    line.setColor(ChartUtils.COLORS[i]);
+                    line.setShape(shape);
+                    line.setCubic(isCubic);
+                    line.setFilled(isFilled);
+                    line.setHasLabels(hasLabels);
+                    line.setHasLabelsOnlyForSelected(hasLabelForSelected);
+                    line.setHasLines(hasLines);
+                    line.setHasPoints(hasPoints);
+                    lines.add(line);
+                }
+
+                data = new LineChartData(lines);
+
+                if (hasAxes) {
+                    Axis axisX = new Axis();
+                    Axis axisY = new Axis().setHasLines(true);
+                    if (hasAxesNames) {
+                        axisX.setName("Axis X");
+                        axisY.setName("Axis Y");
+                    }
+                    data.setAxisXBottom(axisX);
+                    data.setAxisYLeft(axisY);
+                } else {
+                    data.setAxisXBottom(null);
+                    data.setAxisYLeft(null);
+                }
+
+                data.setBaseValue(Float.NEGATIVE_INFINITY);
+                chart.setLineChartData(data);
+
+
 
                 dates = hiveDataCollection.dates;
             }
@@ -80,15 +129,7 @@ public class GraphFragment extends Fragment {
 
     }
 
-    public class ValueTouchListener implements PieChartOnValueSelectListener {
-
-        @Override
-        public void onValueSelected(int arcIndex, SliceValue value) {
-
-            String dateOfCreation = (dates.get(arcIndex));
-
-            Toast.makeText(getActivity(), dateOfCreation, Toast.LENGTH_SHORT).show();
-        }
+    public class ValueTouchListener implements LineChartOnValueSelectListener {
 
         @Override
         public void onValueDeselected() {
@@ -96,5 +137,11 @@ public class GraphFragment extends Fragment {
 
         }
 
+        @Override
+        public void onValueSelected(int lineIndex, int pointIndex, PointValue value) {
+            String dateOfCreation = (dates.get(lineIndex));
+
+            Toast.makeText(getActivity(), dateOfCreation, Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="@string/home"
+            android:icon="@drawable/house"/>
+        <item
+            android:id="@+id/environment"
+            android:title="@string/environment"
+            android:icon="@drawable/environment"/>
+        <item
+            android:id="@+id/pest"
+            android:title="@string/pests"
+            android:icon="@drawable/pest"/>
+        <item
+            android:id="@+id/disease"
+            android:title="@string/disease"
+            android:icon="@drawable/disease"/>
+        <item
+            android:id="@+id/queen"
+            android:title="@string/queen"
+            android:icon="@drawable/queen"/>
+        <item
+            android:id="@+id/eat"
+            android:title="@string/eat"
+            android:icon="@drawable/eat"/>
+    </group>
+</menu>

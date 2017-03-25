@@ -92,7 +92,7 @@ public class PreferencesView extends Fragment implements View.OnClickListener {
                 YearsOfBeekeepingInt = Integer.valueOf(YearsOfBeekeeping.getText().toString());
             }
 
-            SettingsData.put(username, SignInActivity.Display_Name);
+            SettingsData.put(username, SignInActivity.sign_email);
             SettingsData.put(PreferencesView.hiveNumber, NumberOfHivesInt);
             SettingsData.put(PreferencesView.framesPerHive, FramesPerHiveInt);
             SettingsData.put(PreferencesView.hiveBodies, HiveBodiesInt);
@@ -308,7 +308,7 @@ public class PreferencesView extends Fragment implements View.OnClickListener {
         this.mContext = getContext();
 
         ParseQuery<settings> query = ParseQuery.getQuery(settings.class);
-        query.whereEqualTo("Username", SignInActivity.Display_Name);
+        query.whereEqualTo("Username", SignInActivity.sign_email);
         try {
             int row_count = query.count();
             if (row_count != 0) {

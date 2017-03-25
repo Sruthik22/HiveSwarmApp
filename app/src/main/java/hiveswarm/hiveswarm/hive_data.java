@@ -182,4 +182,8 @@ public class hive_data extends ParseObject {
     public int getFrequencyOfFeeding() {
         return getInt(Feeding.frequencyOfFeeding);
     }
+
+    public String getHiveId() {
+        return getString(GeneralObservationsActivity.hiveId);
+    }
 }

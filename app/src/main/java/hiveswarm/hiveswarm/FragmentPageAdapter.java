@@ -18,17 +18,15 @@ public class FragmentPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                Home home = new Home();
-                return home;
+                HiveFragment orchardActivity = new HiveFragment();
+                return orchardActivity;
+
             case 1:
                 GraphFragment GraphTab = new GraphFragment();
                 return GraphTab;
             case 2:
                 PreferencesView preferencesView = new PreferencesView();
                 return preferencesView;
-            case 3:
-                DataView dataView = new DataView();
-                return dataView;
             default:
                 return null;
         }
