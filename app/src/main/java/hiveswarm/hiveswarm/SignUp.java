@@ -1,5 +1,6 @@
 package hiveswarm.hiveswarm;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -40,6 +41,12 @@ public class SignUp extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_sign_up);
             ButterKnife.bind(this);
+
+            TextView tx = (TextView)findViewById(R.id.HiveSwarmTitleText);
+
+            Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/title_font.ttf");
+
+            tx.setTypeface(custom_font);
 
             _signupButton.setOnClickListener(new View.OnClickListener() {
                 @Override

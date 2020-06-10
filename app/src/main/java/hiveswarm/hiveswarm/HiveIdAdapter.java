@@ -72,6 +72,7 @@ public class HiveIdAdapter extends BaseAdapter {
                 // Pass all data country
                 intent.putExtra("Hive_ID",
                         (recordList.get(position).getHive_Id()));
+                intent.putExtra("List Item", position);
                 context.startActivity(intent);
             }
         });

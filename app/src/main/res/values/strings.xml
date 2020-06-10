@@ -27,19 +27,8 @@
     <string name="auth_code_fmt">Auth Code: %s</string>
     <string name="id_token_fmt">ID Token: %s</string>
 
-    <!-- Google Play Services error for Toast -->
-    <string name="play_services_error_fmt">Google Play Services Error: %i</string>
-
     <!-- Button labels -->
     <string name="sign_out">Sign Out</string>
-    <string name="disconnect">Disconnect</string>
-    <string name="refresh_token">Get Fresh Token</string>
-
-    <!-- Content Description for images -->
-    <string name="desc_google_icon">Google Logo</string>
-
-    <!-- Rationale for asking for Contacts -->
-    <string name="contacts_permission_rationale">Contacts access is needed in order to retrieve your email address.</string>
 
     <!-- Activity Names and Descriptions -->
     <string name="name_sign_in_activity">SignInActivity</string>
@@ -180,4 +169,22 @@
     <string name="seen_queen">Seen the Queen:</string>
     <string name="seen_queen_cells">Seen Queen Cells:</string>
     <string name="brood_pattern">Brood Pattern:</string>
+    <string name="add_raspberry_pi">RPi</string>
+    <string name="pair">Pair</string>
+    <string name="enter_ip_address_of_your_rpi">Enter IP Address of your RPi: </string>
+    <string name="rpi_data">RPi Data</string>
+    <string name="hive_data">Hive Data</string>
+    <string name="ip_address">IP Address: </string>
+    <string name="notification">Notification:</string>
+    <string name="Frequency_of_alarm">Frequency: (How many days between alarms)</string>
+    <string name="add_to_do">To Do List</string>
+    <string name="to_do_item">To-Do Item:</string>
+    <string name="log_out">Log Out</string>
+    <string name="pie_chart">Pie Chart</string>
+    <string name="bar_graph">Bar Graph</string>
+    <string name="scatter_plot">Bubble Graph</string>
+    <string name="choose_another_graph">Choose another graph</string>
+
+    <string name="hive_id">Choose a Hive</string>
+    <string name="create">Create!</string>
 </resources>

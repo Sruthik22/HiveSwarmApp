@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_to_do"
+        android:title="@string/add_to_do"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/clipboard"/>
+    <item
+        android:id="@+id/rpi_data"
+        android:title="@string/rpi_data"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/hive_data"
+        android:title="@string/hive_data"
+        app:showAsAction="never"/>
+</menu>

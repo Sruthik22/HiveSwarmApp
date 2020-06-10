@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/FRAGMENT_PLACEHOLDER">
+
+    <!-- We need to use check boxes and make a number of data fields -->
+    <!-- We need to have every single data point gathered being a field, and for the
+    spinner we need to populate it with the code, the different hive_id's of the
+    hive -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/hive_id_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <CheckBox
+                android:id="@+id/hs_number_of_frames_with_foundation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_number_of_frames_with_foundation" />
+
+            <CheckBox
+                android:id="@+id/hs_number_of_frames_with_honey_nectar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_number_of_frames_with_honey_nectar" />
+
+            <CheckBox
+                android:id="@+id/hs_number_of_frames_with_pollen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_number_of_frames_with_pollen" />
+
+            <CheckBox
+                android:id="@+id/hs_number_of_frames_with_open_comb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_number_of_frames_with_open_comb" />
+
+            <CheckBox
+                android:id="@+id/hs_number_of_supers_in_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_number_of_supers_in_place" />
+
+            <CheckBox
+                android:id="@+id/hs_number_of_supers_added"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_number_of_supers_added" />
+
+            <CheckBox
+                android:id="@+id/hs_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_temperature" />
+
+            <CheckBox
+                android:id="@+id/hs_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_humidity" />
+
+            <CheckBox
+                android:id="@+id/hs_precipitation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_precipitation" />
+
+            <CheckBox
+                android:id="@+id/hs_how_many_remaining_queen_cells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_how_many_remaining_queen_cells" />
+
+            <CheckBox
+                android:id="@+id/hs_how_many_frames_with_brood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_how_many_frames_with_brood" />
+
+            <CheckBox
+                android:id="@+id/hs_how_many_frames_used_in_brood_chamber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_how_many_frames_used_in_brood_chamber" />
+
+            <CheckBox
+                android:id="@+id/hs_frequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_frequency" />
+
+            <CheckBox
+                android:id="@+id/hs_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hs_amount" />
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/create" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -38,7 +38,7 @@ public class HiveFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_data_view, container, false);
         this.rootView = rootView;
         // Execute RemoteDataTask AsyncTask
-        new HiveFragment.RemoteDataTask().execute();
+        new RemoteDataTask().execute();
         return rootView;
     }
 
@@ -73,11 +73,7 @@ public class HiveFragment extends Fragment {
                 for (hive_data hive_data : ob) {
                     String hiveId = hive_data.getHiveId();
 
-                    if (already_said.contains(hiveId)) {
-                        //already created a tile --> Should later create a tabbed system once press on tile.
-                    }
-
-                    else {
+                    if (!already_said.contains(hiveId)) {
                         HiveDataListItem map = new HiveDataListItem();
 
                         Calendar cal = Calendar.getInstance();
@@ -119,7 +115,7 @@ public class HiveFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(
             Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.orchardadd, menu);
+        inflater.inflate(R.menu.main_menu, menu);
     }
 
     @Override

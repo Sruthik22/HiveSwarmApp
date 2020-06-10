@@ -313,9 +313,6 @@ public class PreferencesView extends Fragment implements View.OnClickListener {
             int row_count = query.count();
             if (row_count != 0) {
                 setVisibleInvisible();
-                Log.e("Preferences View", "Row Count was not 0");
-            } else {
-                Log.e("Preferences View", "Row Count was 0");
             }
         } catch (ParseException e) {
             e.printStackTrace();

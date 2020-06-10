@@ -9,7 +9,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'com.parse:parse-android:1.13.1'
         classpath 'com.github.lecho:hellocharts-android:v1.5.8'
         classpath 'com.google.gms:google-services:3.0.0'

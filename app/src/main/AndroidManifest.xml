@@ -10,10 +10,13 @@
     <!-- Network State Permissions -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- Permission to start Alarm on device reboot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:icon="@drawable/bee"
+        android:icon="@drawable/hiveswarmapplogo"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
@@ -25,6 +28,15 @@
         <activity android:name=".Feeding" />
         <activity android:name=".SetAlarm" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".HivesWithHiveID" />
+        <activity android:name=".FeedingShownActivity" />
+        <activity android:name=".add_raspberry_pi" />
+        <activity android:name=".EnvironmentalInformation" />
+        <activity android:name=".ToDoList" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".GShownActivity" />
+
+        <!--Starting Activity-->
         <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,11 +44,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--All the Drawer Activities-->
         <activity
             android:name=".HiveInformation"
             android:theme="@style/DrawerTheme" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".GShownActivity" />
         <activity
             android:name=".EShownActivity"
             android:theme="@style/DrawerTheme" />
@@ -55,8 +67,7 @@
         <activity
             android:name=".EQShownActivity"
             android:theme="@style/DrawerTheme" />
-        <activity android:name=".FeedingShownActivity" />
-        <activity android:name=".HivesWithHiveID"></activity>
+
     </application>
 
 </manifest>

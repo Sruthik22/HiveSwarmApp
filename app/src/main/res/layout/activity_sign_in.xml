@@ -12,12 +12,16 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal"
-            android:src = "@drawable/hiveswarmtext"/>
+            android:id="@+id/HiveSwarmTitleText"
+            android:text="@string/title_text"
+            android:textSize="56sp"
+            android:textColor="@color/black"/>
+
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout

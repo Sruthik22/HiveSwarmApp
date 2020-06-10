@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 public class FragmentPageAdapter extends FragmentStatePagerAdapter {
-    int mNumOfTabs;
+    private int mNumOfTabs;
 
     public FragmentPageAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
@@ -18,15 +18,11 @@ public class FragmentPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                HiveFragment orchardActivity = new HiveFragment();
-                return orchardActivity;
-
+                return new HiveFragment();
             case 1:
-                GraphFragment GraphTab = new GraphFragment();
-                return GraphTab;
+                return new GraphQuestion1();
             case 2:
-                PreferencesView preferencesView = new PreferencesView();
-                return preferencesView;
+                return new PreferencesView();
             default:
                 return null;
         }

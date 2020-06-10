@@ -1,6 +1,7 @@
 
 package hiveswarm.hiveswarm;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,6 +38,12 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         ButterKnife.bind(this);
+
+        TextView tx = (TextView)findViewById(R.id.HiveSwarmTitleText);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/title_font.ttf");
+
+        tx.setTypeface(custom_font);
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
